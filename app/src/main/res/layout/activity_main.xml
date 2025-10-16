@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="#E8F0F7"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/roleSelectionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sistema de Alerta Bodega"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#1C2833"
+            android:layout_marginBottom="48dp"/>
+
+        <Button
+            android:id="@+id/selectServerButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Activar Modo Servidor (Monitor)"
+            android:layout_marginBottom="16dp"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/selectSensorButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Activar Modo Sensor (Cliente)"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/serverLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modo Servidor"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#34495E"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/ipAddressTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IP del Servidor: Cargando..."
+            android:textSize="16sp"
+            android:gravity="center"
+            android:padding="8dp"
+            android:background="#D6EAF8"
+            android:layout_marginBottom="40dp"/>
+
+        <TextView
+            android:id="@+id/statusTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sin Intrusos"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:textColor="#006400"
+            android:layout_marginBottom="40dp"/>
+
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Restablecer Alarma"
+            android:padding="16dp"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sensorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modo Sensor"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#34495E"
+            android:layout_marginBottom="24dp"/>
+
+        <EditText
+            android:id="@+id/serverIpEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingresa la IP del Servidor"
+            android:inputType="numberDecimal"
+            android:digits="0123456789."
+            android:layout_marginBottom="24dp"/>
+
+        <TextView
+            android:id="@+id/sensorStatusTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alarma: Sin Intrusos"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="#006400"
+            android:layout_marginBottom="40dp"/>
+
+        <Button
+            android:id="@+id/simulateIntruderButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Simular Intruso"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:backgroundTint="#C0392B"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
+
